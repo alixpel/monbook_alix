@@ -20,7 +20,7 @@ show_success();
         <a href="<?php echo BOOK_URL_SITE ?>" target="_blank">Aller au site</a>
         <a href="<?php echo BOOK_URL_SITE ?>admin/chapter/form.php">Modifier la page d'accueil</a>
         <a href="<?php echo BOOK_URL_SITE ?>admin/chapter/chapter_list.php">Ajouter, modifier ou supprimer un chapitre</a>
-        <a href="#">Ajouter, modifier ou supprimer un utilisateur</a>
+        <!-- <a href="#">Ajouter, modifier ou supprimer un utilisateur</a> -->
         <a href="<?php echo BOOK_URL_SITE ?>admin/deconnexion.php">Se déconnecter</a>
     </div>
 
