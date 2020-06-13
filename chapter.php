@@ -1,14 +1,6 @@
-<h2></h2>
-
-<h3>Détails</h3>
 <?php
-echo "<ul>";
-echo "<li>Technologies utilisées : " .  . "</li>";
-echo "<li>Année : " .  . "</li>";
-echo "<li>Client : " .  . "</li>";
-echo "<li>Lien GitHub : " .  . "</li>";
-echo "</ul>";
+include "config.php";
 
-echo "image";
-echo "texte";
- ?>
+$chapitre_a_afficher = unMenu($_GET["chapitreAAfficher"]);
+
+include PATH_TEMPLATE . "page_chapitre.php";

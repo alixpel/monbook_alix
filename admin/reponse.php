@@ -3,8 +3,8 @@ include "../config.php";
 
 // on verifie que j'ai bien mes envoyé des données.
 if(empty($_POST["identifiant_admin"]) || empty($_POST["motdepasse_admin"])) {
-    ajouterErreur("Merci de vous connecter");
-    changeDePage(BOOK_URL_SITE . "admin/connexion.php");
+  ajouterErreur("Merci de vous connecter");
+  changeDePage(BOOK_URL_SITE . "admin/connexion.php");
 } else {
     // on va voir si l'utilisateur est en base de données
   //  $queryUtilisateur = "SELECT * FROM user where identifiant='$_POST[identifiant_admin]' AND motdepasse = '$_POST[motdepasse_admin]'";

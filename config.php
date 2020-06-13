@@ -15,3 +15,5 @@ define("BOOK_PATH_SITE", __DIR__ . "/");
 
 define("URL_TEMPLATE", BOOK_URL_SITE . "template/");
 define("PATH_TEMPLATE", BOOK_PATH_SITE . "template/");
+
+define("NOM_DU_SITE", "Alix Pelletier Book");
