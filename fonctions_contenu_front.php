@@ -1,23 +1,24 @@
 <?php
-
-function tousLesMenus () {
+// ==============================================================================
+function tousLesChapitres () {
     // retourne tous les menus
     global $bdd;// va chercher la var en dehors de la fonction
-    return $bdd -> query("select * from menu order by ordre") -> fetchAll(PDO::FETCH_ASSOC);
+    return $bdd -> query("select * from chapitre order by id_user") -> fetchAll(PDO::FETCH_ASSOC);
 }
-
+// ==============================================================================
 // FETCH_ASSOC : permet d'associer les noms et pas leurs clés
 
 function tousLesUsers () {
   global $bdd;
   return $bdd -> query("select * from user order by id_user") -> fetchAll(PDO::FETCH_ASSOC);
 }
-
-function unMenu ($idMenu) {
-    // retourne toutes les informations du menu qui a comme identifiant $idMenu par exemple unMenu(3)
+// ==============================================================================
+function unChapitre ($idChapter) {
+    // retourne toutes les informations du chap qui a comme identifiant $idChapter par exemple unChapitre(3)
     global $bdd;
 
-    $query = $bdd -> prepare("SELECT * FROM menu WHERE id_menu = :maValeurDeMenu"); // :idMenu = étiquette
-    $query -> execute([":maValeurDeMenu" => $idMenu]);
+    $query = $bdd -> prepare("SELECT * FROM chapter WHERE id_chapter = :maValeurDeChapitre");
+    $query -> execute([":maValeurDeChapitre" => $idChapter]);
     return $query -> fetch(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
 }
+// ==============================================================================
