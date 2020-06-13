@@ -41,17 +41,17 @@ function html_image($urlImage, $classHtml = "") {
   // on affiche le tag vers l'image seulement si l'image existe.
 
   if(is_file(BOOK_PATH_SITE .$urlImage)) {
-      return "<img src='".RESTO_URL_SITE."/$urlImage' class='$classHtml'>";
+      return "<img src='".BOOK_URL_SITE."/$urlImage' class='$classHtml'>";
   }
   return "";
 }
 // =================================================================
-function MontrerValeur($iduu) {
+function MontrerValeur($nom_donnee) {
   // montre la valeur de simpledonnee
   global $bdd;
   // 1 - on verifie si la donnée existe déjà dans la table.
-  $query = $bdd -> prepare("SELECT * from simpledonnee where iduu = :iduu");
-  $query -> execute([":iduu" => $iduu]);
+  $query = $bdd -> prepare("SELECT * from simple_donnee where nom_donnee = :nom_donnee");
+  $query -> execute([":nom_donnee" => $nom_donnee]);
   $val = $query ->  fetch(PDO::FETCH_ASSOC);
   if(isset($val["valeur"])) {
       return $val["valeur"];
@@ -82,12 +82,12 @@ function tousLesChapitres () {
 // }
 //
 // =================================================================
-function unMenu ($idMenu) {
+function unMenu ($idChapitre) {
   // retourne toutes les informations du menu qui a comme identifiant $idMenu par exemple unMenu(3)
   global $bdd;
 
-  $query = $bdd -> prepare("SELECT * FROM menu WHERE id_menu = :maValeurDeMenu"); // :idMenu = étiquette
-  $query -> execute([":maValeurDeMenu" => $idMenu]);
+  $query = $bdd -> prepare("SELECT * FROM chapter WHERE id_projet = :maValeurDeChapitre"); // :idMenu = étiquette
+  $query -> execute([":maValeurDeChapitre" => $idChapitre]);
   return $query -> fetch(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
 }
 // =================================================================
@@ -103,8 +103,8 @@ function echoKey($tableau, $cle, $valeurDefaut = "") {
 
 function html_image($urlImage, $classHtml = "") {
   // on affiche le tag vers l'image seulement si l'image existe.
-  if(is_file(RESTO_PATH_SITE .$urlImage)) {
-      return "<img src='".RESTO_URL_SITE."/$urlImage' class='$classHtml'>";
+  if(is_file(BOOK_PATH_SITE .$urlImage)) {
+      return "<img src='".BOOK_URL_SITE."/$urlImage' class='$classHtml'>";
   }
   return "";
 }
@@ -132,26 +132,26 @@ function enregistreValeur($iduu, $valeur) {
   // dans cette variable, il y a le connexion à la base de données, nous pouvons donc
   // l'utilise dans notre fonction.
   // 1 - on verifie si la donnée existe déjà dans la table.
-  $nbVal = $bdd -> prepare("SELECT count(*) as nbEnregistrement from simpledonnee where iduu = :iduu");
-  $nbVal -> execute([":iduu" => $iduu]);
+  $nbVal = $bdd -> prepare("SELECT count(*) as nbEnregistrement from simple_donnee where nom_donnee = :nom_donnee");
+  $nbVal -> execute([":nom_donnee" => $nom_donnee]);
   $resultNbVal =  $nbVal -> fetch(PDO::FETCH_ASSOC);
   if($resultNbVal["nbEnregistrement"] == 0) {
       // nous n'avons pas d'enregistrement, nous devons l'insérer dans la base.
-      $query = $bdd -> prepare("INSERT into simpledonnee(iduu, valeur) VALUES ( :iduu, :valeur )");
-      $query -> execute([":iduu" => $iduu, ":valeur" => $valeur]);
+      $query = $bdd -> prepare("INSERT into simple_donnee(nom_donnee, valeur) VALUES ( :nom_donnee, :valeur )");
+      $query -> execute([":nom_donnee" => $nom_donnee, ":valeur" => $valeur]);
   } else {
       // l'enregistrement existe, nous devons le mettre à jour.
-      $query = $bdd -> prepare("UPDATE simpledonnee SET valeur=:valeur WHERE iduu = :iduu");
-      $query -> execute([":iduu" => $iduu, ":valeur" => $valeur]);
+      $query = $bdd -> prepare("UPDATE simple_donnee SET valeur=:valeur WHERE nom_donnee = :nom_donnee");
+      $query -> execute([":iduu" => $nom_donnee, ":valeur" => $valeur]);
   }
 }
 // =================================================================
-function MontrerValeur($iduu) {
+function MontrerValeur($nom_donnee) {
   // montre la valeur de simpledonnee
   global $bdd;
   // 1 - on verifie si la donnée existe déjà dans la table.
-  $query = $bdd -> prepare("SELECT * from simpledonnee where iduu = :iduu");
-  $query -> execute([":iduu" => $iduu]);
+  $query = $bdd -> prepare("SELECT * from simple_donnee where nom_donnee = :nom_donnee");
+  $query -> execute([":nom_donnee" => $nom_donnee]);
   $val = $query ->  fetch(PDO::FETCH_ASSOC);
   if(isset($val["valeur"])) {
       return $val["valeur"];
@@ -168,7 +168,7 @@ function enregistrerFichier($fichier, $destination) {
           //
           // 1 - nous verrifions que le chemin de destination existe, sinon nous le créons.
           verifierCheminFichier($destination);
-          move_uploaded_file($fichier["tmp_name"], RESTO_PATH_SITE . $destination);
+          move_uploaded_file($fichier["tmp_name"], BOOK_PATH_SITE . $destination);
       }
   } else {
       ajouterErreur("Un fichier n'a pas été enregistré.");
