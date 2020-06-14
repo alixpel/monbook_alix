@@ -13,7 +13,7 @@ $bdd = new PDO("mysql:host=$server;dbname=$dataBase", $user, $password, array(PD
 define("BOOK_URL_SITE", "http://localhost:8888/coursdenicolas/pages/monbook_alix/");
 define("BOOK_PATH_SITE", __DIR__ . "/");
 
-define("URL_TEMPLATE", BOOK_URL_SITE . "template/");
-define("PATH_TEMPLATE", BOOK_PATH_SITE . "template/");
+define("URL_TEMPLATE", BOOK_URL_SITE . "templates/");
+define("PATH_TEMPLATE", BOOK_PATH_SITE . "templates/");
 
 define("NOM_DU_SITE", "Alix Pelletier Book");

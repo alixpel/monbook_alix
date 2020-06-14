@@ -33,13 +33,11 @@ function show_success() {
       }
       echo "</ul></div>";
   }
-
   unset($_SESSION["success"]); // une fois les erreurs affichées, je supprime le tableau pour être sur de ne plus les afficher plus tard.
 }
 // =================================================================
 function html_image($urlImage, $classHtml = "") {
   // on affiche le tag vers l'image seulement si l'image existe.
-
   if(is_file(BOOK_PATH_SITE .$urlImage)) {
       return "<img src='".BOOK_URL_SITE."/$urlImage' class='$classHtml'>";
   }
@@ -64,28 +62,24 @@ function tousLesChapitres () {
 }
 // =================================================================
 // FETCH_ASSOC : permet d'associer les noms et pas leurs clés
-//
 // function tousLesUsers () {
 //   global $bdd;
 //   return $bdd -> query("select * from user order by id_user") -> fetchAll(PDO::FETCH_ASSOC);
 // }
-//
 // =================================================================
 function unMenu ($idChapitre) {
   // retourne toutes les informations du menu qui a comme identifiant $idMenu par exemple unMenu(3)
   global $bdd;
-
   $query = $bdd -> prepare("SELECT * FROM chapter WHERE id_projet = :maValeurDeChapitre"); // :idMenu = étiquette
   $query -> execute([":maValeurDeChapitre" => $idChapitre]);
   return $query -> fetch(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
 }
 // =================================================================
 function echoKey($tableau, $cle, $valeurDefaut = "") {
-      // ecrit la valeur de la case clé de mon tableau.
   if(!empty($tableau[$cle])) {
-      echo $tableau[$cle];
+    echo $tableau[$cle];
   } else {
-      echo $valeurDefaut;
+    echo $valeurDefaut;
   }
 }
 // =================================================================
@@ -107,11 +101,9 @@ function f($str) {
 }
 // =================================================================
 function enregistreValeur($iduu, $valeur) {
-  // permet d'enregistrer une donnée dans la table simpledonnee
+  // permet d'enregistrer une donnée dans la table simple_donnee
   global $bdd;
-  // permet de récupérer la variable $bdd, même si celle-ci est à l'extérieur de ma fonction
-  // dans cette variable, il y a le connexion à la base de données, nous pouvons donc
-  // l'utilise dans notre fonction.
+  // permet de récupérer la variable $bdd, même si celle-ci est à l'extérieur de ma fonction dans cette variable, il y a le connexion à la base de données, nous pouvons donc l'utiliser dans notre fonction.
   // 1 - on verifie si la donnée existe déjà dans la table.
   $nbVal = $bdd -> prepare("SELECT count(*) as nbEnregistrement from simple_donnee where nom_donnee = :nom_donnee");
   $nbVal -> execute([":nom_donnee" => $nom_donnee]);
@@ -123,7 +115,7 @@ function enregistreValeur($iduu, $valeur) {
   } else {
       // l'enregistrement existe, nous devons le mettre à jour.
       $query = $bdd -> prepare("UPDATE simple_donnee SET valeur=:valeur WHERE nom_donnee = :nom_donnee");
-      $query -> execute([":iduu" => $nom_donnee, ":valeur" => $valeur]);
+      $query -> execute([":nom_donnee" => $nom_donnee, ":valeur" => $valeur]);
   }
 }
 // =================================================================
