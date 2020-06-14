@@ -14,10 +14,26 @@ footer {
   min-height: 10vh;
 }
 
+/* Page accueil site */
+.accueil_texte_image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.texte_accueil {
+  text-align: center;
+}
+
+.image_accueil {
+  margin: auto;
+}
+
 /* titles */
 
 h1 {
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
 h2 {
@@ -26,6 +42,9 @@ h2 {
 
 /* text */
 
+.texte_accueil p {
+  font-family: 'Libre Baskerville', serif;
+}
 
 
 /* links - buttons */
@@ -33,3 +52,7 @@ h2 {
 /* lists */
 
 /* images */
+
+.image_d_accueil {
+  max-width: 30vw;
+}

@@ -2,15 +2,15 @@
 
 <main>
   <div class="container">
-    <h1><?php echo MontrerValeur("TITRE_ACCUEIL")?></h1>
-    <div class="row">
-      <div class="col-6">
-        <div class="pr-20 texte">
-          <?php echo nl2br(MontrerValeur("TEXTE_ACCUEIL"))?>
-        </div>
+    <div class="titre_accueil">
+      <h1><?php echo MontrerValeur("TITRE_ACCUEIL")?></h1>
+    </div>
+    <div class="accueil_texte_image">
+      <div class="texte_accueil">
+        <p><?php echo nl2br(MontrerValeur("TEXTE_ACCUEIL"))?></p>
       </div>
-      <div class="col-6">
-        <?php echo html_image("img/accueil.jpg")?>
+      <div class="image_accueil">
+        <?php echo html_image("img/accueil.jpg", "image_d_accueil")?>
       </div>
     </div>
   <div>
