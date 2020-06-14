@@ -58,17 +58,6 @@ function MontrerValeur($nom_donnee) {
   }
 }
 // =================================================================
-function html_a($text, $lien = "#", $class="", $confirm="") {
-      // fabrique la balise <a href></a>
-
-  if($confirm != "") {
-      $confirm = "onclick=\"return confirm('$confirm')\"";
-  }
-
-  return "<a href='$lien' class='$class' $confirm >$text</a>";
-}
-
-// =================================================================
 function tousLesChapitres () {
   global $bdd;// va chercher la var en dehors de la fonction
   return $bdd -> query("select * from chapitre order by ordre") -> fetchAll(PDO::FETCH_ASSOC);
@@ -100,15 +89,6 @@ function echoKey($tableau, $cle, $valeurDefaut = "") {
   }
 }
 // =================================================================
-
-function html_image($urlImage, $classHtml = "") {
-  // on affiche le tag vers l'image seulement si l'image existe.
-  if(is_file(BOOK_PATH_SITE .$urlImage)) {
-      return "<img src='".BOOK_URL_SITE."/$urlImage' class='$classHtml'>";
-  }
-  return "";
-}
-// =================================================================
 function html_a($text, $lien = "#", $class="", $confirm="") {
       // fabrique la balise <a href></a>
   if($confirm != "") {
@@ -116,6 +96,7 @@ function html_a($text, $lien = "#", $class="", $confirm="") {
   }
   return "<a href='$lien' class='$class' $confirm >$text</a>";
 }
+
 // echo html_a("aller à l'accueil", "accueil.php");
 // =================================================================
 function f($str) {
@@ -146,18 +127,6 @@ function enregistreValeur($iduu, $valeur) {
   }
 }
 // =================================================================
-function MontrerValeur($nom_donnee) {
-  // montre la valeur de simpledonnee
-  global $bdd;
-  // 1 - on verifie si la donnée existe déjà dans la table.
-  $query = $bdd -> prepare("SELECT * from simple_donnee where nom_donnee = :nom_donnee");
-  $query -> execute([":nom_donnee" => $nom_donnee]);
-  $val = $query ->  fetch(PDO::FETCH_ASSOC);
-  if(isset($val["valeur"])) {
-      return $val["valeur"];
-  }
-}
-// =================================================================
 function enregistrerFichier($fichier, $destination) {
   if($fichier["error"] == UPLOAD_ERR_OK || $fichier["error"] == UPLOAD_ERR_NO_FILE) {
       // nous utilisons ici des constantes fournies par PHP. Nous pourrions utiliser les chiffres correspondants
@@ -172,6 +141,24 @@ function enregistrerFichier($fichier, $destination) {
       }
   } else {
       ajouterErreur("Un fichier n'a pas été enregistré.");
+  }
+}
+// =================================================================
+function verifierCheminFichier($chemin) {
+  // verifier si un chemin de fichier existe.
+  // si les répértoires n'existent pas, nous allons les créer.
+  $arrChemin = explode("/", $chemin);
+  $verifChemin = BOOK_PATH_SITE;
+  foreach ($arrChemin as $dossier) {
+    if(!strstr($dossier, ".")) {
+      // si il n'y a pas de point dans le nom du dossier, c'est qu'il s'agit d'un dossier
+      // (sinon, c'est un fichier)
+      $verifChemin .= $dossier ."/";
+      var_dump($verifChemin);
+      if(!is_dir($verifChemin)) { // ce n'est pas un dossier, alors nous allons le créer.
+          mkdir($verifChemin);
+      }
+    }
   }
 }
 // =================================================================

@@ -1,6 +1,6 @@
 <?php
-include "../config.php";
-include "include/header.php";
+include "../../config.php";
+include "../include/header.php";
 
 proteger_page();
 
@@ -20,7 +20,7 @@ show_success();
 
 <div class="list">
   <?php
-    $results = $dataBase -> query("SELECT * FROM chapter order by id_projet") -> fetchAll();
+    $results = $bdd -> query("SELECT * FROM chapter order by id_projet") -> fetchAll();
     if(count($results) == 0) {
         echo "Aucun chapitre";
     } else {
@@ -36,4 +36,4 @@ show_success();
 
 </div>
 
-<?php include "include/footer.php"; ?>
+<?php include "../include/footer.php"; ?>
