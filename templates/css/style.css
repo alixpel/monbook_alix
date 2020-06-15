@@ -5,10 +5,11 @@ font-family: 'Libre Baskerville', serif; */
 /* divisions */
 
 header {
+  align-items: center;
   background-color: gold;
   display: flex;
   justify-content: space-around;
-  min-height: 10vh;
+  min-height: 20vh;
 }
 
 header ul {
@@ -23,6 +24,13 @@ header nav {
   align-items: center;
   display: flex;
   width: 38vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 65vh;
 }
 
 footer {
@@ -50,9 +58,21 @@ footer {
   text-align: center;
 }
 
+/* Page contact */
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 48vw;
+}
+
 /* titles */
 
-h1 {
+h1, h3 {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
@@ -83,10 +103,30 @@ header a {
   text-decoration: none;
 }
 
+.contacts a {
+  background-color: rgb(150, 150, 150);
+  border-radius: 1rem;
+  color: rgb(250, 250, 250);
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.3rem 1rem 0.4rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  width: 11vw;
+}
+
 /* lists */
 
 header li {
   list-style-type: none;
+}
+
+.contacts a:hover {
+  background-color: rgb(10, 10, 10);
+  transition: background-color 650ms;
+}
+
+.contacts a:not(:hover) {
+  transition: background-color 550ms;
 }
 
 /* images */
