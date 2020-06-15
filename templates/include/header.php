@@ -15,5 +15,6 @@
   </head>
   <body>
     <header>
+      <h2><?php echo MontrerValeur("mon_nom")?></h2>
       <?php include "nav.php" ?>
     </header>

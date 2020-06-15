@@ -6,27 +6,48 @@ font-family: 'Libre Baskerville', serif; */
 
 header {
   background-color: gold;
+  display: flex;
+  justify-content: space-around;
   min-height: 10vh;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  font-family: 'PT Serif', serif;
+  justify-content: space-between;
+  width: inherit;
+}
+
+header nav {
+  align-items: center;
+  display: flex;
+  width: 38vw;
 }
 
 footer {
   background-color: gold;
+  display: flex;
+  justify-content: center;
   min-height: 10vh;
+}
+
+.mentions_legales {
+
 }
 
 /* Page accueil site */
 .accueil_texte_image {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: auto;
+  width: 56vw;
 }
 
 .texte_accueil {
   text-align: center;
-}
-
-.image_accueil {
-  margin: auto;
 }
 
 /* titles */
@@ -37,6 +58,7 @@ h1 {
 }
 
 h2 {
+  color: rgb(80, 80, 80);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -46,10 +68,26 @@ h2 {
   font-family: 'Libre Baskerville', serif;
 }
 
+.mentions_legales p {
+  font-family: 'Montserrat', sans-serif;
+}
 
 /* links - buttons */
 
+header a {
+  background-color: rgb(250, 250, 250);
+  border-radius: 0.8rem;
+  color: rgb(80, 80, 80);
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.3rem 1rem 0.4rem 1rem;
+  text-decoration: none;
+}
+
 /* lists */
+
+header li {
+  list-style-type: none;
+}
 
 /* images */
 
