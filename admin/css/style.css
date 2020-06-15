@@ -1,3 +1,22 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'PT Serif', serif;
 font-family: 'Libre Baskerville', serif; */
+
+
+/* divisions */
+
+header {
+  background-color: gold;
+  min-height: 10vh;
+}
+
+footer {
+  background-color: gold;
+  min-height: 10vh;
+}
+
+/* titles */
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
