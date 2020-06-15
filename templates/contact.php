@@ -1,4 +1,6 @@
-<?php include "include/header.php" ?>
+<?php
+include "../config.php";
+include "include/header.php" ?>
 
 <main>
   <div class="container">
