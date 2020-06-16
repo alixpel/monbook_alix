@@ -1,15 +1,15 @@
 <?
 include "../config.php";
 
-$requeteChapitre = $bdd->query("SELECT * FROM chapter WHERE id_projet = " . $_GET["lien"]);
-$resultChapitres = $requeteChapitre-> fetch();
+$requeteChapitres = $bdd->query("SELECT * FROM chapter WHERE id_projet = " . $_GET["lien"]);
+$resultChapitres = $requeteChapitres-> fetch();
 
 if($_GET["lien"] > count($resultChapitres)) {
   header("location:../accueil.php");
   exit;
 }
+?>
 
- ?>
 <main>
   <div class="container">
     <h1> <?php echo $resultChapitres["nom"];?> </h1>

@@ -26,7 +26,7 @@ header nav {
   width: 38vw;
 }
 
-main {
+main, .nav_chapitres {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -68,6 +68,13 @@ footer {
   margin-bottom: 2rem;
   margin-top: 2rem;
   width: 48vw;
+}
+
+/* Page nav_chapitres.php */
+
+.nav_chapitres a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
 }
 
 /* titles */

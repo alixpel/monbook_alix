@@ -1,31 +1,26 @@
 <?php
 include "../config.php";
-//include "header.php"
+include "include/header.php"
  ?>
 
-<nav>
-  <ul>
-    <li>
-      <a href="<?php BOOK_PATH_SITE ?>../accueil.php">Accueil</a>
-    </li>
-      <?php /*foreach( tousLesChapitres() as $chapitre ) {
-        echo "<li>";
-        echo html_a($chapitre["nom"], BOOK_URL_SITE . "chapitre.php?chapitreAAfficher=$chapitre[id_projet]");
-        echo "</li>";
-      }*/
+<div class="nav_chapitres">
+  <a href="<?php BOOK_PATH_SITE ?>accueil.php">Accueil</a>
+  <?php echo "<h2>Les projets</h2>"; ?>
+  <nav>
+    <ul>
+      <?php
       $requeteChapitres = $bdd->query("SELECT * FROM chapter");
       $resultChapitres = $requeteChapitres->fetchAll();
-
-      echo "<h2>Les projets</h2>";
       foreach ($resultChapitres as $key => $chapitre_a_afficher)  {
         $url_chapitre = "page_chapitre.php?lien=" . $chapitre_a_afficher["id_projet"];
-        echo "<a href='$url_chapitre'>Titre : " . $chapitre_a_afficher["nom"] . "</a><br>";
+        echo "<li><a href='$url_chapitre'>" . $chapitre_a_afficher["nom"] . "</a></li>";
       }
       ?>
 
-  </ul>
-</nav>
+    </ul>
+  </nav>
+</div>
 
 <?php
-//include "footer.php";
+include "include/footer.php";
 ?>
