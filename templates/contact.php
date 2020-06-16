@@ -8,7 +8,7 @@ include "include/header.php" ?>
   <div class="contacts">
     <a href="<?php echo MontrerValeur("TELEPHONE_DIRECT") ?>"><?php echo MontrerValeur("TELEPHONE") ?></a>
     <a href="<?php echo MontrerValeur("email") ?>">e-mail</a>
-    <a href="<?php echo MontrerValeur("CV") ?>">C.V.</a>
+    <a href="<?php echo MontrerValeur("CV") ?>" target="_blank">C.V.</a>
   </div>
 </main>
 

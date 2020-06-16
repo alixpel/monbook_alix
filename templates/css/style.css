@@ -30,7 +30,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 65vh;
+  min-height: 68vh;
 }
 
 footer {
@@ -132,5 +132,6 @@ header li {
 /* images */
 
 .image_d_accueil {
+  max-height: 22vw;
   max-width: 30vw;
 }

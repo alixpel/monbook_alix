@@ -1,5 +1,6 @@
 <?php
 include "functions.php";
+include "fonctions_contenu_front.php";
 
 session_start();
 
