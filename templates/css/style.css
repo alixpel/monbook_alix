@@ -141,6 +141,7 @@ header a {
 .nav_chapitres a {
   color: rgb(10, 10, 10);
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.6rem;
   text-decoration: none;
 }
 
@@ -163,15 +164,6 @@ header a {
 /* lists */
 
 header li {
-  list-style-type: none;
-}
-
-.nav_chapitres ul {
-  padding-inline-start: 10px;
-}
-
-.nav_chapitres li {
-  line-height: 1.6rem;
   list-style-type: none;
 }
 

@@ -1,4 +1,4 @@
-<?
+<?php
 include "../config.php";
 
 $requeteChapitres = $bdd->query("SELECT * FROM chapter WHERE id_projet = " . $_GET["lien"]);
