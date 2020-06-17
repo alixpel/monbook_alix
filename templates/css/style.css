@@ -26,7 +26,7 @@ header nav {
   width: 38vw;
 }
 
-main, .nav_chapitres {
+main, .nav_chapitres, .one_chapter {
   display: flex;
   flex-direction: column;
   min-height: 63vh;
@@ -98,6 +98,12 @@ footer {
   max-width: 20vw
 }
 
+.pagination {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 /* titles */
 
 h1, h3 {
@@ -119,6 +125,11 @@ h2 {
 .mentions_legales p {
   font-family: 'Montserrat', sans-serif;
 }
+
+.one_chapter p {
+  font-family: 'Montserrat', sans-serif;
+}
+
 
 /* links - buttons */
 
@@ -151,20 +162,20 @@ header a {
   transition: background-color 550ms;
 }
 
-.nav_chapitres a {
+.nav_chapitres a, .one_chapter a {
   color: rgb(10, 10, 10);
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6rem;
   text-decoration: none;
 }
 
-.nav_chapitres a:hover, .reseaux_sociaux a:hover {
+.nav_chapitres a:hover, .reseaux_sociaux a:hover, .one_chapter a:hover {
   color: rgb(60, 60, 60);
   font-weight: 500;
   transition: 550ms;
 }
 
-.nav_chapitres a:not(:hover), .reseaux_sociaux a:not(:hover) {
+.nav_chapitres a:not(:hover), .reseaux_sociaux a:not(:hover), .one_chapter a:not(:hover) {
   transition: 550ms;
 }
 
@@ -189,4 +200,8 @@ header li {
 
 .chapter_thumbnail {
   max-width: 17vw;
+}
+
+.chapter_realsize {
+  max-width: 60vw;
 }
