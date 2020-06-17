@@ -1,5 +1,6 @@
 <?php
 include "../config.php";
+include "include/header.php";
 
 $requeteChapitres = $bdd->query("SELECT * FROM chapter WHERE id_projet = " . $_GET["lien"]);
 $resultChapitres = $requeteChapitres-> fetch();
@@ -23,11 +24,13 @@ if($_GET["lien"] > count($resultChapitres)) {
         <?php echo $resultChapitres["texte"]?>
       </div>
       <div class="image_chapitre">
-        <?php echo html_image("img/$_GET[chapitreAAfficher].jpg");?>
+        <?php echo html_image("img/chapter/$_GET[chapitreAAfficher].jpg");?>
       </div>
     </div>
   </div>
 </main>
 <div class="pagination">
-  <?php echo $chapitre_a_afficher["page"]?>
+  <?php echo $resultChapitres["page"]?>
 </div>
+
+<?php include "include/footer.php"; ?>

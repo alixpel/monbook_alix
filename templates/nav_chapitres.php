@@ -1,6 +1,6 @@
 <?php
 include "../config.php";
-include "include/header.php"
+include "include/header.php";
  ?>
 
 <div class="nav_chapitres">
@@ -13,6 +13,7 @@ include "include/header.php"
       $url_chapitre = "page_chapitre.php?lien=" . $chapitre_a_afficher["id_projet"];
       echo "<a href='$url_chapitre'>" . $chapitre_a_afficher["nom"] . "</a>";
       echo "<p>" . $chapitre_a_afficher["techno_id"] . "</p>";
+      echo html_image("img/chapter_img/" .  $chapitre_a_afficher['id_projet'] . ".jpg", "chapter_thumbnail");
     }
     ?>
   <h2>Filtrer par technologie</h2>

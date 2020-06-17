@@ -30,6 +30,7 @@ main, .nav_chapitres {
   display: flex;
   flex-direction: column;
   min-height: 63vh;
+  padding: 1rem;
 }
 
 footer {
@@ -172,4 +173,8 @@ header li {
 .image_d_accueil {
   max-height: 22vw;
   max-width: 30vw;
+}
+
+.chapter_thumbnail {
+  max-width: 17vw;
 }
