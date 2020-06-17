@@ -6,7 +6,7 @@ $requeteChapitres = $bdd->query("SELECT * FROM chapter WHERE id_projet = " . $_G
 $resultChapitres = $requeteChapitres-> fetch();
 
 if($_GET["lien"] > count($resultChapitres)) {
-  header("location:../accueil.php");
+  header("location:nav_chapitres.php");
   exit;
 }
 ?>
@@ -19,12 +19,12 @@ if($_GET["lien"] > count($resultChapitres)) {
         <h2>Client</h2>
         <?php echo $resultChapitres["client"]?>
         <h2>Lien</h2>
-        <?php echo $resultChapitres["lien"]?>
+        <?php echo "<a href='" . $resultChapitres['lien'] . "'>github</a>"?>
         <h2>Présentation</h2>
         <?php echo $resultChapitres["texte"]?>
       </div>
       <div class="image_chapitre">
-        <?php echo html_image("img/chapter/$_GET[chapitreAAfficher].jpg");?>
+        <?php echo html_image("img/chapter_img/" .  $resultChapitres['id_projet'] . ".jpg");?>
       </div>
     </div>
   </div>
