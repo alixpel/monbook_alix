@@ -29,15 +29,24 @@ header nav {
 main, .nav_chapitres {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  min-height: 68vh;
+  min-height: 63vh;
 }
 
 footer {
+  align-items: center;
   background-color: gold;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   min-height: 10vh;
+}
+
+.reseaux_sociaux {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+  width: 25vw;
 }
 
 .mentions_legales {
@@ -72,9 +81,8 @@ footer {
 
 /* Page nav_chapitres.php */
 
-.nav_chapitres a {
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
+.nav_chapitres {
+  margin-left: 10vw;
 }
 
 /* titles */
@@ -121,12 +129,6 @@ header a {
   width: 11vw;
 }
 
-/* lists */
-
-header li {
-  list-style-type: none;
-}
-
 .contacts a:hover {
   background-color: rgb(10, 10, 10);
   transition: background-color 650ms;
@@ -134,6 +136,43 @@ header li {
 
 .contacts a:not(:hover) {
   transition: background-color 550ms;
+}
+
+.nav_chapitres a {
+  color: rgb(10, 10, 10);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.nav_chapitres a:hover, .reseaux_sociaux a:hover {
+  color: rgb(60, 60, 60);
+  font-weight: 500;
+  transition: 550ms;
+}
+
+.nav_chapitres a:not(:hover), .reseaux_sociaux a:not(:hover) {
+  transition: 550ms;
+}
+
+.reseaux_sociaux a {
+  color: rgb(10, 10, 10);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+/* lists */
+
+header li {
+  list-style-type: none;
+}
+
+.nav_chapitres ul {
+  padding-inline-start: 10px;
+}
+
+.nav_chapitres li {
+  line-height: 1.6rem;
+  list-style-type: none;
 }
 
 /* images */

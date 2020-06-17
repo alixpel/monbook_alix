@@ -4,7 +4,7 @@ include "include/header.php"
  ?>
 
 <div class="nav_chapitres">
-  <a href="<?php BOOK_PATH_SITE ?>accueil.php">Accueil</a>
+  
   <?php echo "<h2>Les projets</h2>"; ?>
   <nav>
     <ul>
