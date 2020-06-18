@@ -8,7 +8,11 @@ include "include/header.php" ?>
   <div class="contacts">
     <a href="<?php echo MontrerValeur("TELEPHONE_DIRECT") ?>"><?php echo MontrerValeur("TELEPHONE") ?></a>
     <a href="<?php echo MontrerValeur("email") ?>">e-mail</a>
+    <!-- <a href="#">Linkedin</a> -->
     <a href="<?php echo MontrerValeur("CV") ?>" target="_blank">C.V.</a>
+  </div>
+  <div class="mouse_pointer">
+    <i class='fas fa-mouse-pointer fa-lg'></i>
   </div>
 </main>
 

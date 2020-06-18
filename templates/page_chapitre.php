@@ -13,7 +13,7 @@ if($_GET["lien"] > count($resultChapitres)) {
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> <?php echo NOM_DU_SITE; echo " - "; echo $resultChapitres["client"]; echo " - "; echo $resultChapitres["nom"];?></title>
+    <title> <?php echo NOM_DU_SITE; echo " - "; echo $resultChapitres["client"]; echo " - "; echo $resultChapitres["nom"];?> </title>
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">

@@ -21,14 +21,16 @@ include "include/header.php";
     ?>
   </div>
   <h2>Filtrer par technologie</h2>
-    <?php
-    $requeteTechno = $bdd->query("SELECT * FROM techno");
-    $resultTechno = $requeteTechno->fetchAll();
-    foreach ($resultTechno as $key2 => $techno_a_afficher) {
-      $url_techno = "page_techno.php?lien=" . $techno_a_afficher["id_techno"];
-      echo "<a href='$url_techno'>" . $techno_a_afficher["nom_techno"] . "</a>";
-    }
-    ?>
+    <div class="techno_list">
+      <?php
+      $requeteTechno = $bdd->query("SELECT * FROM techno");
+      $resultTechno = $requeteTechno->fetchAll();
+      foreach ($resultTechno as $key2 => $techno_a_afficher) {
+        $url_techno = "page_techno.php?lien=" . $techno_a_afficher["id_techno"];
+        echo "<a href='$url_techno' class='lien_techno'>" . $techno_a_afficher["nom_techno"] . "</a>";
+      }
+      ?>
+    </div>
 </div>
 
 <?php
