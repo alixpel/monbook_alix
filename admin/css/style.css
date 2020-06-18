@@ -6,17 +6,137 @@ font-family: 'Libre Baskerville', serif; */
 /* divisions */
 
 header {
+  align-items: center;
   background-color: gold;
-  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  min-height: 20vh;
+}
+
+.form {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+  width: 50vw;
+}
+
+hr {
+  border: 1px solid rgb(240, 240, 240);
+}
+
+.main {
+  min-height: 60vh;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.menu_accueil {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  justify-content: space-around;
+}
+
+.chapter {
+  margin-bottom: 1rem;
+}
+
+.list {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 2rem;
 }
 
 footer {
+  align-items: center;
   background-color: gold;
-  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  min-height: 15vh;
 }
 
 /* titles */
 
-h1 {
+h1, h2 {
   font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* text */
+
+span {
+  font-size: 1rem;
+}
+
+.fa-ellipsis-h {
+  color: gold;
+}
+
+footer p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+/* links */
+
+.menu_accueil a {
+  color: rgb(60, 60, 60);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.chapter a {
+  color: rgb(60, 60, 60);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.list a {
+  color: rgb(60, 60, 60);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+/* lists */
+
+.list li {
+  list-style-type: none;
+}
+
+/* inputs - buttons */
+
+.field input {
+  width: 25.5vw;
+}
+
+.cancel-button {
+  background-color: rgb(200, 200, 200);
+  border: 0px;
+  border-radius: 0.3rem;
+  color: rgb(60, 60, 60);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  text-decoration: none;
+}
+
+.send-button {
+  background-color: gold;
+  border: 0px;
+  border-radius: 0.3rem;
+  color: rgb(60, 60, 60);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
 }
