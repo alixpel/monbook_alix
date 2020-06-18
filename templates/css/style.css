@@ -95,12 +95,28 @@ footer {
 .chapter_preview {
   border: 3px solid gold;
   border-radius: 0.5rem;
-  max-width: 20vw
+  margin: 0rem 0.5rem 0.5rem 0rem;
+  max-width: 20vw;
+  padding: 1%;
+}
+
+/* chapitre */
+
+.one_chapter {
+  margin: auto;
+  width: 80vw;
+}
+
+.image_chapitre {
+  display: flex;
+  justify-content: center;
 }
 
 .pagination {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -111,7 +127,7 @@ h1, h3 {
   text-align: center;
 }
 
-h2 {
+h2, h4 {
   color: rgb(80, 80, 80);
   font-family: 'Montserrat', sans-serif;
 }
@@ -126,10 +142,29 @@ h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.one_chapter p {
+.chapter_list p {
   font-family: 'Montserrat', sans-serif;
 }
 
+.one_chapter p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5rem;
+}
+
+span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.fa-mouse-pointer {
+  color: gold;
+  transform: rotate(-30deg);
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  color: gold;
+}
 
 /* links - buttons */
 
@@ -177,6 +212,10 @@ header a {
 
 .nav_chapitres a:not(:hover), .reseaux_sociaux a:not(:hover), .one_chapter a:not(:hover) {
   transition: 550ms;
+}
+
+.chapter_preview a {
+  font-size: 1.3rem;
 }
 
 .reseaux_sociaux a {
