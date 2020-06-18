@@ -244,6 +244,12 @@ header a {
   text-decoration: none;
 }
 
+.admin_link {
+  color: rgb(150, 150, 150);
+  text-decoration: none;
+  text-align: center;
+}
+
 /* lists */
 
 header li {

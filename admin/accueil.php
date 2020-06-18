@@ -14,7 +14,7 @@ proteger_page();
 
   <div class="intro">
     <div class="menu_accueil">
-      <a href="<?php echo BOOK_URL_SITE ?>" target="_blank">Aller au site</a>
+      <a href="<?php echo BOOK_URL_SITE ?>templates/accueil.php">Aller au site</a>
       <a href="<?php echo BOOK_URL_SITE ?>admin/form_accueil/form.php">Modifier la page d'accueil</a>
       <a href="<?php echo BOOK_URL_SITE ?>admin/chapter/chapter_list.php">Ajouter, modifier ou supprimer un chapitre</a>
       <!-- <a href="#">Ajouter, modifier ou supprimer un utilisateur</a> -->

@@ -5,7 +5,8 @@
         <a href="#"><i class="fab fa-twitter"></i>&nbsptwitter</a>
       </div>
       <div class="mentions_legales">
-        <p>©alixpelletier <?php echo date("Y"); ?> </p>
+        <p><a href="<?php PATH_TEMPLATE ?>../admin/" class="admin_link">adminitration du site</a>
+          ©alixpelletier <?php echo date("Y"); ?></p>
       </div>
     </footer>
   </body>
