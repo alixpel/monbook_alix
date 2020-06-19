@@ -181,6 +181,10 @@ footer p {
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
 }
 
+textarea, input {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
 /* img */
 
 .mini_image {

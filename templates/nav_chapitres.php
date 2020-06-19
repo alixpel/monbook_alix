@@ -12,11 +12,12 @@ include "include/header.php";
     $resultChapitres = $requeteChapitres->fetchAll();
     foreach ($resultChapitres as $key => $chapitre_a_afficher)  {
       $url_chapitre = "page_chapitre.php?lien=" . $chapitre_a_afficher["id_projet"];
-      echo "<div class='chapter_preview'>";
-      echo "<a href='$url_chapitre'>" . $chapitre_a_afficher["nom"] . "</a>";
+      echo "<div class='chapter_preview'><a href='$url_chapitre'>";
+      echo "<h5>" . $chapitre_a_afficher["nom"] . "</h5>";
+      echo "<hr>";
       echo "<p>" . $chapitre_a_afficher["techno_id"] . "</p>";
       echo html_image("img/chapter_img/" .  $chapitre_a_afficher['id_projet'] . ".jpg", "chapter_thumbnail");
-      echo "</div>";
+      echo "</a></div>";
     }
     ?>
   </div>

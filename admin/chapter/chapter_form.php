@@ -41,7 +41,8 @@ show_success();
       </div>
       <hr>
       <div class="field">
-        <label for="texte">Description : </label><textarea name="texte" placeholder="Description" type="text" cols="40" rows="5" value="<?php echoKey($chapitreAModifier, "texte")?>"></textarea>
+        <label for="texte">Description : </label>
+        <textarea name="texte" placeholder="Description" type="text" cols="40" rows="5"><?php echoKey($chapitreAModifier, "texte")?></textarea>
       </div>
       <hr>
       <div class="field">
