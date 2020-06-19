@@ -148,7 +148,7 @@ function verifierCheminFichier($chemin) {
 }
 // =================================================================
 function changeDePage($url) {
-    // permet de faire une redirection vers $url
-    header("location:" . $url);
-    exit;
-}
+        // permet de faire une redirection vers $url
+        header("location:" . $url);
+        exit;
+    }

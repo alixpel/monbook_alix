@@ -43,10 +43,12 @@ if($_GET["lien"] > count($resultChapitres)) {
       </div>
     </main>
     <div class="pagination">
-      <i class="fas fa-chevron-left"></i>
+      <a href="<?php echo PATH_TEMPLATE . "/page_chapitre.php?lien=" .  ($_GET['page'] + 1) ?>"><i class="fas fa-chevron-left"></i></a>
+      &nbsp
       <?php
       echo $resultChapitres["page"];
       ?>
+      &nbsp
       <i class="fas fa-chevron-right"></i>
     </div>
 

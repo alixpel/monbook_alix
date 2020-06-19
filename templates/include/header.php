@@ -16,6 +16,6 @@
   </head>
   <body>
     <header>
-      <h2><?php echo MontrerValeur("mon_nom")?></h2>
+      <h2><?php echo MontrerValeur("mon_nom") . " - " . MontrerValeur("ma_fonction")?></h2>
       <?php include "nav.php" ?>
     </header>
