@@ -86,7 +86,7 @@ function f($str) {
   return $bdd->quote($str);
 }
 // =================================================================
-function enregistreValeur($iduu, $valeur) {
+function enregistreValeur($nom_donnee, $valeur) {
   // permet d'enregistrer une donnée dans la table simple_donnee
   global $bdd;
   // permet de récupérer la variable $bdd, même si celle-ci est à l'extérieur de ma fonction dans cette variable, il y a le connexion à la base de données, nous pouvons donc l'utiliser dans notre fonction.

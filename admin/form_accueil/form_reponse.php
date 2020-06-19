@@ -6,9 +6,8 @@ proteger_page();
 if(!empty($_POST)) {
 enregistreValeur("TITRE_ACCUEIL", $_POST["titre"]);
 enregistreValeur("TEXTE_ACCUEIL", $_POST["texteAccueil"]);
-
 }
-
+// =============================================================
 if(!empty($_FILES)) {
     enregistrerFichier($_FILES["imageAccueil"],  "img/accueil.jpg");
 }
