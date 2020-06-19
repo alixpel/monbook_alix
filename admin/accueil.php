@@ -5,7 +5,7 @@ proteger_page();
 ?>
 
 <div class="main">
-  <h1>Bienvenue dans votre espace administration</h1>
+  <h2>Bienvenue dans votre espace administration</h2>
 
   <?php
   show_error();

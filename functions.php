@@ -98,10 +98,14 @@ function enregistreValeur($nom_donnee, $valeur) {
       // nous n'avons pas d'enregistrement, nous devons l'insérer dans la base.
       $query = $bdd -> prepare("INSERT into simple_donnee(nom_donnee, valeur) VALUES ( :nom_donnee, :valeur )");
       $query -> execute([":nom_donnee" => $nom_donnee, ":valeur" => $valeur]);
+      // show_success("L'enregistrement a été effectué");
+      // exit;
   } else {
       // l'enregistrement existe, nous devons le mettre à jour.
       $query = $bdd -> prepare("UPDATE simple_donnee SET valeur=:valeur WHERE nom_donnee = :nom_donnee");
       $query -> execute([":nom_donnee" => $nom_donnee, ":valeur" => $valeur]);
+      // show_success("L'enregistrement a été mis à jour.");
+      // exit;
   }
 }
 // =================================================================
@@ -116,9 +120,12 @@ function enregistrerFichier($fichier, $destination) {
           // 1 - nous verrifions que le chemin de destination existe, sinon nous le créons.
           verifierCheminFichier($destination);
           move_uploaded_file($fichier["tmp_name"], BOOK_PATH_SITE . $destination);
+          // show_success("Le fichier a été enregistré");
+          // exit;
       }
   } else {
-      ajouterErreur("Un fichier n'a pas été enregistré.");
+      show_error("Un fichier n'a pas été enregistré.");
+      // exit;
   }
 }
 // =================================================================

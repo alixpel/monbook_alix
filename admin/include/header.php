@@ -16,5 +16,5 @@
   </head>
   <body>
     <header>
-      <h1>Lalala</h1>
+      <h1><?php echo MontrerValeur("mon_nom") ?> - espace administration du site</h1>
     </header>

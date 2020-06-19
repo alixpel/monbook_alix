@@ -20,6 +20,10 @@ header {
 
 }
 
+.intro {
+  margin-left: 2rem;
+}
+
 .field {
   display: flex;
   flex-direction: row;
@@ -92,6 +96,8 @@ h1, h2 {
 }
 
 h1 {
+  color: rgb(60, 60, 60);
+  font-weight: 600;
   text-align: center;
 }
 
