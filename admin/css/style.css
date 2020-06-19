@@ -28,6 +28,13 @@ header {
   width: 50vw;
 }
 
+.image_accueil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vw;
+}
+
 hr {
   border: 1px solid rgb(240, 240, 240);
 }
@@ -48,6 +55,21 @@ hr {
 
 .chapter {
   margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.list_paragraph {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+
+.yellow_line {
+  background-color: gold;
+  height: 100%;
+  width: 0.3rem;
 }
 
 .list {
@@ -73,6 +95,10 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  margin-left: 2rem;
+}
+
 /* text */
 
 span {
@@ -91,6 +117,12 @@ footer p {
 /* links */
 
 .menu_accueil a {
+  color: rgb(60, 60, 60);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.form a {
   color: rgb(60, 60, 60);
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
