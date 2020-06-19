@@ -44,4 +44,8 @@ if(!empty($_POST)) {// si on a cliqué sur valider
 if(!empty($_FILES)) {
   enregistrerFichier($_FILES["imageChapitre"],  "img/chapter_img/$chapterID.jpg");
 }
+
+if(!empty($_FILES)) {
+  enregistrerFichier($_FILES["imageChapitreBis"],  "img/chapter_img_bis/$chapterID.jpg");
+}
 changeDePage(BOOK_URL_SITE . "admin/chapter/chapter_list.php");

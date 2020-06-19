@@ -115,12 +115,16 @@ footer {
 
 .one_chapter {
   margin: auto;
+  margin-left: 2rem;
   width: 80vw;
 }
 
 .image_chapitre {
+  align-items: flex-start;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  margin-left: 3rem;
 }
 
 .pagination {
@@ -276,5 +280,8 @@ header li {
 }
 
 .chapter_realsize {
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 0.3rem;
+  margin-bottom: 0.6rem;
   max-width: 60vw;
 }

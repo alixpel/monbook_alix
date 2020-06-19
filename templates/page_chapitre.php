@@ -38,7 +38,8 @@ if($_GET["lien"] > count($resultChapitres)) {
         <?php echo $resultChapitres["texte"]?></p>
       </div>
       <div class="image_chapitre">
-        <?php echo html_image("img/chapter_img/" .  $resultChapitres['id_projet'] . ".jpg", "chapter_realsize");?>
+        <?php echo html_image("img/chapter_img/" .  $resultChapitres['id_projet'] . ".jpg", "chapter_realsize");
+              echo html_image("img/chapter_img_bis/" . $resultChapitres['id_projet'] . ".jpg", "chapter_realsize"); ?>
       </div>
     </main>
     <div class="pagination">

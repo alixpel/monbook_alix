@@ -59,6 +59,9 @@ show_success();
       <div class="image_du_chapitre">
       <label for="imageChapitre">Image du chapitre : </label><input name="imageChapitre" type="file"  accept="image/jpeg" />
       </div>
+      <div class="image_du_chapitre_bis">
+      <label for="imageChapitreBis">deuxième image du chapitre : </label><input name="imageChapitreBis" type="file"  accept="image/jpeg" />
+      </div>
       <input type="submit" value="Envoyer" class="send-button" />
       <a href="<?php echo BOOK_URL_SITE ?>admin/form_accueil/form.php" class="cancel-button">Annuler</a>
     </form>
