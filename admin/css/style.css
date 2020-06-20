@@ -50,7 +50,7 @@ hr {
 .menu_accueil {
   display: flex;
   flex-direction: column;
-  min-height: 30vh;
+  min-height: 35vh;
   justify-content: space-around;
 }
 
@@ -98,6 +98,13 @@ td {
   border-radius: 0.2rem;
   padding: 0.2rem 0rem;
   width: 20vw;
+}
+
+.add_user {
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  width: 50vw;
 }
 
 footer {
@@ -166,11 +173,14 @@ footer p {
   text-decoration: none;
 }
 
-.users a {
-  color: rgb(60, 60, 60);
+.delete_link {
+  color: rgb(242, 136, 39);
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
+}
+
+.delete_link:hover {font-weight: 500;
 }
 
 table a {

@@ -27,7 +27,7 @@ show_success();
             echo "<ul>";
           foreach($results as $result) {
             $lienModifier = html_a("Modifier", BOOK_URL_SITE . "admin/chapter/chapter_form.php?chapitreAAfficher=$result[id_projet]");
-            $lienSupprimer = html_a("Supprimer", BOOK_URL_SITE . "admin/chapter/chapter_delete.php?chapitreASupprimer=$result[id_projet]", "alert", "Effacer ce chapitre ?");
+            $lienSupprimer = html_a("Supprimer", BOOK_URL_SITE . "admin/chapter/chapter_delete.php?chapitreASupprimer=$result[id_projet] ", "alert", "Effacer ce chapitre ?");
             echo "<li>$result[nom] &nbsp<i class=\"fas fa-ellipsis-h\"></i>&nbsp ( $lienModifier | $lienSupprimer)</li>";
           }
           echo "</ul>";

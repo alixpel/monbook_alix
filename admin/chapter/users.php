@@ -25,7 +25,7 @@ proteger_page();
       echo "<tr>";
       echo "<td>" . $user_a_afficher["nom"] . "</td>";
       echo "<td>" . $user_a_afficher["identifiant"] . "</td>";
-      echo "<td><a href=\"delete_user.php?url_user_delete=$user_a_afficher[id_user]\" onclick=\"return confirm('Voulez-vous supprimer cet utilisateur ?')\">supprimer</a></td>";
+      echo "<td><a href=\"delete_user.php?url_user_delete=$user_a_afficher[id_user]\" onclick=\"return confirm('Voulez-vous supprimer cet utilisateur ?')\" class=\"delete_link\">supprimer</a></td>";
       echo "</tr>";
     }
     echo "</table>";
@@ -37,12 +37,15 @@ proteger_page();
       <div class="field">
         <label for="nom">nom : </label><input type="text" name="nom" value="">
       </div>
+      <hr>
       <div class="field">
         <label for="identifiant">identifiant : </label><input type="text" name="identifiant" value="">
       </div>
+      <hr>
       <div class="field">
         <label for="motdepasse">mot de passe</label><input type="password" name="motdepasse" value="">
       </div>
+      <hr>
       <input type="submit" value="Envoyer" class="send-button" />
       <a href="<?php echo BOOK_URL_SITE ?>admin/accueil.php" class="cancel-button">Annuler</a>
     </form>
