@@ -8,7 +8,7 @@ include "include/header.php";
   <h2>Les projets</h2>
   <div class="chapter_list">
     <?php
-    $requeteChapitres = $bdd->query("SELECT * FROM chapter");
+    $requeteChapitres = $bdd->query("SELECT * FROM chapter ORDER BY page");
     $resultChapitres = $requeteChapitres->fetchAll();
     foreach ($resultChapitres as $key => $chapitre_a_afficher)  {
       $url_chapitre = "page_chapitre.php?lien=" . $chapitre_a_afficher["id_projet"];
