@@ -79,6 +79,7 @@ table {
   border: 2px solid rgb(150, 150, 150);
   border-radius: 0.2rem;
   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2rem;
   padding: 0.2rem;
   text-align: center;
 }
@@ -133,6 +134,11 @@ footer p {
   text-align: center;
 }
 
+.fa-mouse-pointer {
+  color: gold;
+  transform: rotate(-30deg);
+}
+
 /* links */
 
 .menu_accueil a {
@@ -157,6 +163,17 @@ footer p {
   color: rgb(60, 60, 60);
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
+}
+
+.users a {
+  color: rgb(60, 60, 60);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+table a {
+  font-weight: 600;
 }
 
 /* lists */
