@@ -12,7 +12,7 @@ show_success();
   <h2>Liste des chapitres</h2>
   <div class="chapter">
     <a href="<?php echo BOOK_URL_SITE ?>admin/accueil.php">Retour à l'accueil</a><span>&nbsp&nbsp&nbsp|&nbsp&nbsp</span>
-    <a href="<?php echo BOOK_URL_SITE ?>admin/chapter/chapter_form.php">Ajouter un chapitre</a>
+    <a href="<?php echo BOOK_URL_SITE ?>admin/chapter/chapter_form.php">Ajouter un chapitre&nbsp&nbsp<sub><i class='fas fa-mouse-pointer fa-lg'></i></sub></a>
   </div>
   <div class="list_paragraph">
     <div class="yellow_line">

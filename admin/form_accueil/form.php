@@ -13,7 +13,7 @@ proteger_page();
   show_success();
   ?>
     <div class="form">
-      <a href="<?php echo BOOK_URL_SITE ?>admin/accueil.php">Retour à l'accueil</a>
+      <a href="<?php echo BOOK_URL_SITE ?>admin/accueil.php">Retour à l'accueil&nbsp&nbsp<sub><i class='fas fa-mouse-pointer fa-lg'></i></sub></a>
       <!-- Le type d'encodage des données, enctype, DOIT être spécifié comme ce qui suit -->
       <form enctype="multipart/form-data" action="form_reponse.php" method="post">
         <hr>
