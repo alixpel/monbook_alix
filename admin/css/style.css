@@ -39,7 +39,7 @@ hr {
   border: 1px solid rgb(240, 240, 240);
 }
 
-.main {
+.main, .users {
   min-height: 60vh;
   padding-bottom: 2rem;
   padding-left: 3rem;
@@ -73,6 +73,29 @@ hr {
 .list {
   font-family: 'Montserrat', sans-serif;
   line-height: 2rem;
+}
+
+table {
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 0.2rem;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+th {
+  background-color: gold;
+  border-radius: 0.2rem;
+  color: rgb(100, 100, 100);
+  padding: 0.5rem 0rem;
+  width: 45vw;
+}
+
+td {
+  border: 1.5px solid gold;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0rem;
+  width: 20vw;
 }
 
 footer {
