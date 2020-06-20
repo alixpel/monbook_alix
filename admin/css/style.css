@@ -16,12 +16,8 @@ header {
 .form {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.8rem;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
 
-}
-
-.intro {
-  margin-left: 2rem;
 }
 
 .field {
@@ -46,7 +42,7 @@ hr {
 .main {
   min-height: 60vh;
   padding-bottom: 2rem;
-  padding-left: 2rem;
+  padding-left: 3rem;
   padding-right: 2rem;
 }
 
@@ -59,7 +55,6 @@ hr {
 
 .chapter {
   margin-bottom: 1rem;
-  margin-left: 2rem;
 }
 
 .list_paragraph {
@@ -67,7 +62,6 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-left: 1rem;
 }
 
 .yellow_line {
@@ -99,10 +93,6 @@ h1 {
   color: rgb(60, 60, 60);
   font-weight: 600;
   text-align: center;
-}
-
-h2 {
-  margin-left: 2rem;
 }
 
 /* text */

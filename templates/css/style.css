@@ -69,6 +69,12 @@ footer {
 }
 
 /* Page contact */
+.contact_page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .contacts {
   display: flex;
@@ -301,4 +307,9 @@ header li {
   border-radius: 0.3rem;
   margin-bottom: 0.6rem;
   max-width: 60vw;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 10vw;
 }
