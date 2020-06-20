@@ -21,7 +21,7 @@ proteger_page();
     echo "<tr>";
     echo "<td>" . $user_a_afficher["nom"] . "</td>";
     echo "<td>" . $user_a_afficher["identifiant"] . "</td>";
-    echo "<td><a href=\"delete_user.php\">supprimer</a></td>";
+    echo "<td><a href=\"delete_user.php?url_user_delete=$user_a_afficher[id_user]\" onclick=\"return confirm('Voulez-vous supprimer cet utilisateur ?')\">supprimer</a></td>";
     echo "</tr>";
   }
   echo "</table>";
