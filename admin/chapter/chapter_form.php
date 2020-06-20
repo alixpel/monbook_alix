@@ -46,7 +46,7 @@ show_success();
       </div>
       <hr>
       <div class="field">
-        <label for="page">Page : </label><input name="page" placeholder="Page" type="number" value="<?php echoKey($chapitreAModifier, "page")?>">
+        <label for="page">Page (ordre des projets) : </label><input name="page" placeholder="Page" type="number" value="<?php echoKey($chapitreAModifier, "page")?>">
       </div>
       <hr>
       <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
