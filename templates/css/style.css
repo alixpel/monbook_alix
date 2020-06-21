@@ -93,14 +93,14 @@ footer {
 /* Page nav_chapitres.php */
 
 .nav_chapitres {
-  margin-left: 10vw;
-  padding-bottom: 2rem;
+  padding: 3rem;
 }
 
 .chapter_list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .chapter_preview {
@@ -118,6 +118,7 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-bottom: 1rem;
 }
 
 /* chapitre */
