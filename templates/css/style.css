@@ -29,8 +29,9 @@ header nav {
 main, .nav_chapitres, .one_chapter {
   display: flex;
   flex-direction: column;
+  margin: auto;
   min-height: 63vh;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 footer {
@@ -323,4 +324,9 @@ header li {
 .avatar {
   border-radius: 50%;
   width: 10vw;
+}
+
+.avatar_thumbnail {
+  border-radius: 50%;
+  height: 15vh;
 }

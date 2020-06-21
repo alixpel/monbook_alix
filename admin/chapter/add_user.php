@@ -5,7 +5,7 @@ proteger_page();
 // AJOUTER CHAPITRE :
 if(!empty($_POST)) {// si on a cliqué sur valider
   if($_POST["id_projet"] == 0) {// 0 dans hidden
-    $query = $bdd -> prepare ("INSERT INTO user (nom, identifiant, motdepasse) VALUES (:nom, :identifiant , :motdepasse)");
+    $query = $bdd -> prepare ("INSERT INTO user (nom, identifiant, motdepasse) VALUES (:nom, :identifiant , sha1(md5(:motdepasse)))");
     $query -> execute([
       ":nom" => $_POST["nom"],
       ":identifiant" =>  $_POST["identifiant"],

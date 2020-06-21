@@ -16,6 +16,7 @@
   </head>
   <body>
     <header>
+      <img src="../img/contact/avatar_thumbnail.png" class="avatar_thumbnail" alt="">
       <h2><?php echo MontrerValeur("mon_nom") . " - " . MontrerValeur("ma_fonction")?></h2>
       <?php include "nav.php" ?>
     </header>
