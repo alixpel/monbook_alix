@@ -16,5 +16,8 @@
   </head>
   <body>
     <header>
+      <div class="avatar">
+        <img src="../../img/contact/avatar_thumbnail.png" class="avatar_thumbnail" alt="">
+      </div>
       <h1><?php echo MontrerValeur("mon_nom") ?> - espace administration du site</h1>
     </header>

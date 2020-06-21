@@ -7,9 +7,6 @@ if(empty($_POST["identifiant_admin"]) || empty($_POST["motdepasse_admin"])) {
   changeDePage(BOOK_URL_SITE . "admin/connexion.php");
 } else {
     // on va voir si l'utilisateur est en base de données
-  //  $queryUtilisateur = "SELECT * FROM user where identifiant='$_POST[identifiant_admin]' AND motdepasse = '$_POST[motdepasse_admin]'";
-  //  $resultatUtilisateur = $bdd -> query($queryUtilisateur) -> fetchAll(PDO::FETCH_ASSOC);//retourne le resultat sans les index chiffrés
-  //  ces 2 lignes améliorées (% apostrophes) en remplaçant par :
   $query = $bdd -> prepare("SELECT * FROM user WHERE identifiant = :idUserStr AND motdepasse = :mdp");
   $query -> execute(
     array(

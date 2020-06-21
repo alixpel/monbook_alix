@@ -9,8 +9,26 @@ header {
   align-items: center;
   background-color: gold;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   min-height: 20vh;
+}
+
+.connexion {
+  min-height: 50vh;
+  padding: 2rem;
+}
+
+.connexion_form {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8rem;
+  margin: auto;
+  width: 50vw;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+
+.avatar {
+  padding: 1.2rem 2rem 1rem 0rem;
 }
 
 .form {
@@ -235,4 +253,9 @@ textarea, input {
 
 .mini_image {
   max-width: 30vw;
+}
+
+.avatar_thumbnail {
+  border-radius: 50%;
+  height: 15vh;
 }
