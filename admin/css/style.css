@@ -58,7 +58,7 @@ hr {
 }
 
 .main, .user_page {
-  min-height: 60vh;
+  min-height: 53vh;
   padding-bottom: 2rem;
   padding-left: 3rem;
   padding-right: 2rem;
@@ -252,7 +252,7 @@ textarea, input {
 /* img */
 
 .mini_image {
-  max-width: 30vw;
+  max-width: 15vw;
 }
 
 .avatar_thumbnail {
