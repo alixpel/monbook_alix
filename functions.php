@@ -116,7 +116,6 @@ function enregistrerFichier($fichier, $destination) {
       // voir : https://www.php.net/manual/fr/features.file-upload.errors.php
       if($fichier["error"] == UPLOAD_ERR_OK) {
           // un fichier a été envoyé correctement, nous devons le traiter
-          //
           // 1 - nous verrifions que le chemin de destination existe, sinon nous le créons.
           verifierCheminFichier($destination);
           move_uploaded_file($fichier["tmp_name"], BOOK_PATH_SITE . $destination);
