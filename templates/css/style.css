@@ -94,6 +94,7 @@ footer {
 
 .nav_chapitres {
   margin-left: 10vw;
+  padding-bottom: 2rem;
 }
 
 .chapter_list {
@@ -105,8 +106,10 @@ footer {
 .chapter_preview {
   border: 3px solid gold;
   border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0rem 0.5rem 0.5rem 0rem;
-  max-width: 17vw;
   padding: 1%;
 }
 
@@ -166,8 +169,7 @@ h2, h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 0.1rem;
-  margin-top: 0.1rem;
+  margin: 0.1rem 0.5rem;
 }
 
 header h2 {
@@ -190,6 +192,7 @@ header h2 {
 
 .chapter_preview p {
   font-size: 1rem;
+  margin: 0rem 0.5rem;
 }
 
 .one_chapter p {
@@ -261,7 +264,11 @@ header a {
 }
 
 .chapter_preview a {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-size: 1.3rem;
+  justify-content: space-between;
 }
 
 .lien_techno {
@@ -299,7 +306,10 @@ header li {
 }
 
 .chapter_thumbnail {
-  max-width: 17vw;
+  border: 1px solid rgb(210, 210, 210);
+  height: 28vh;
+  /* width: 17vw; */
+  object-fit: cover;
 }
 
 .chapter_realsize {

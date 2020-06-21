@@ -14,9 +14,11 @@ include "include/header.php";
       $url_chapitre = "page_chapitre.php?lien=" . $chapitre_a_afficher["id_projet"];
       echo "<div class='chapter_preview'><a href='$url_chapitre'>";
       echo "<h5>" . $chapitre_a_afficher["nom"] . "</h5>";
-      echo "<hr>";
+      // echo "<hr>";
       echo "<p>" . $chapitre_a_afficher["techno_id"] . "</p>";
+      echo "<div class=\"thumbnail_div\">";
       echo html_image("img/chapter_img/" .  $chapitre_a_afficher['id_projet'] . ".jpg", "chapter_thumbnail");
+      echo "</div>";
       echo "</a></div>";
     }
     ?>
