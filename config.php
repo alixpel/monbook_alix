@@ -7,7 +7,7 @@ session_start();
 $server = 'localhost';
 $user = 'root';
 $password = 'root';
-$dataBase = 'monbook_alix';// nom de la base de donné
+$dataBase = 'monbook_alix';
 
 $bdd = new PDO("mysql:host=$server;dbname=$dataBase", $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
