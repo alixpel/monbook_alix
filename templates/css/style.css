@@ -232,7 +232,7 @@ header a {
 }
 
 header a:hover {
-  background-color: #ffec83;
+  background-color: #dcf6f6;
   color: rgb(30, 30, 30);
   transition: background-color 650ms;
 }
